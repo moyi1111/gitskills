@@ -1,4 +1,6 @@
 helloworld
 I have learned about the orders of git by using test.txt.
 Now I try to use these orders in this text again.
+I have used pull to update my local storehouse. 
 After add/commit/push ,now I try to clone my partner's text when they finish it.
+what is the problem???
