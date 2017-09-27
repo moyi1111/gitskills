@@ -1,0 +1,4 @@
+helloworld
+I have learned about the orders of git by using test.txt.
+Now I try to use these orders in this text again.
+After add/commit/push ,now I try to clone my partner's text when they finish it.
