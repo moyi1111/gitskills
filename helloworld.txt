@@ -5,3 +5,5 @@ I have used pull to update my local storehouse.
 After add/commit/push ,now I try to clone my partner's text when they finish it.
 what is the problem???  
 wrong spellling....now continue
+I have clone anther storehouse in my local storehouse.
+and when my partner update songwenze.txt,I hava used pull order to update my own local storehouse.
