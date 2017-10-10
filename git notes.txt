@@ -1,0 +1,17 @@
+1
+(1) 返回上一级目录：cd .. (cd 与 .. 之间有一空格)。
+(2) 进入某一目录：cd git (进入 git 目录)。
+(3) 显示当前路径：pwd。
+2、git init 初始化git仓库
+3、git add a.txt
+4、git commit -m "mark"
+git status 查看仓库当前状态
+git diff查看不同
+git log显示从最近到最远的提交日志
+git log --pretty=oneline 减少上一个输出
+git checkout -- readme.txt意思就是，把readme.txt文件在工作区的修改全部撤销
+cat a.txt 显示a文本文档的内容
+ls显示目录下文件
+
+
+
