@@ -10,3 +10,9 @@ TX（T：Transmitter 发送）表示为Arduino发送指令信息给计算机，R
 
 还有一个相关网址，是关于蓝牙连接的，内容我就不复制在这个上面了。网址如下：
 http://www.arduino.cn/thread-16311-1-1.html
+
+
+通过和同学之间的交流，了解到开发板和app之间的通信通过串口就可以实现，一下网址是一些相关的资料。包括串口通信的读取数据，写入数据，和读取数据的一些详细的分类。
+
+网址如下：
+http://m.blog.csdn.net/iracer/article/details/50334041
