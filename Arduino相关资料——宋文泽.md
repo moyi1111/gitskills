@@ -16,3 +16,9 @@ http://www.arduino.cn/thread-16311-1-1.html
 
 网址如下：
 http://m.blog.csdn.net/iracer/article/details/50334041
+
+
+查阅的JAVA和arduino进行串口通信的网址如下：              重点关注arduino部分代码
+http://m.blog.csdn.net/doutao6677/article/details/53907251
+c#
+http://www.cnblogs.com/conexpress/p/3323333.html
