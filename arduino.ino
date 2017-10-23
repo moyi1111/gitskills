@@ -1,0 +1,96 @@
+char datas[] = "t36080000000025001100t03D80000000000000001t36480000000003005B24t31880000000000000000t34580000000000000000t36080000000000002800t3608000000B500001A01t36080000000000140004t36080000000047130502t32180000000000009B00t3218002000000403768Et36386700004F0080791Et42B800000000009B0675t420800000000000000AFt03D8000000000000000Ct31D80000000000000004t3938000000003C000000t31880000000000000003t42B80100000000FA0395t3638C010002F00000000";
+//从上位机发送到arduino
+char buffer[20][25];
+char bufferguard;
+char datasguard;
+char id[20][3];
+int DLC[20];
+char databuffer[20][16];
+char receiveBuffer[25];
+
+int numdata = 0;
+char flag = 1;
+
+void setup(){
+  Serial.begin(9600);
+  //while(Serial.read() >= 0){}
+}
+
+void depart()
+{
+    for(int i=0;i<20;i++)
+    {
+        
+        for(int j=0;j<20;j++)
+        {
+            buffer[i][j]=datas[i*20+j];
+            
+            //Serial.print(buffer);
+        }
+    }
+    for(int i=0;i<20;i++)
+    {
+        for(int j=1;j<3;j++)
+        {
+            id[i][j]=buffer[i][j];
+        }
+        DLC[i]=int(buffer[i][4])-48;
+
+       // Serial.print(DLC[i])
+        
+        for(int j=0;j<16;j++)
+        {
+            databuffer[i][j]=buffer[i][j+5];
+        }
+        
+    }
+}
+
+/***
+void depart()
+{
+    for(int i=0;i<20;i++)
+    {
+        datasguard=datas[4];
+        for(int j=datasguard-5;j<datasguard*2+5;j++)
+        {
+            buffer[i][j]=datas[j];
+        }
+    }
+}
+***/
+
+void send()
+{
+    for(int i=0;i<20;i++)
+    {
+        for(int j=0;j<DLC[i];j+=2)
+        {
+            Serial.print(123);
+            //Serial.print(databuffer[i][j]);
+            Serial.println(databuffer[i][j]+databuffer[i][j+1]);
+        }
+        
+    }
+}
+
+
+void receive(){
+  if(Serial.available()>0){
+    delay(100);
+    numdata = Serial.readBytes(receiveBuffer,21);
+    Serial.println(receiveBuffer);
+  }
+  while(Serial.read() >= 0){}
+  for(int i=0;i<25;i++){
+    receiveBuffer[i]='\0';
+  }
+}
+void loop()
+{
+
+  depart();
+  //receive();
+  send(); 
+
+}
